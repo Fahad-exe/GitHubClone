@@ -10,19 +10,31 @@ import SwiftUI
 struct RootView: View {
     var body: some View {
         TabView{
-            ContentView()
+            NavigationStack{
+                ContentView()
+                    .navigationTitle("Home")
+            }
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
-            NotificationPage()
+            NavigationStack{
+                NotificationPage()
+                    .navigationTitle("Notification")
+            }
                 .tabItem {
                     Label("Notification", systemImage: "bell")
                 }
-            ExplorePage()
+            NavigationStack{
+                ExplorePage()
+                    .navigationTitle("Explore")
+            }
                 .tabItem {
                     Label("Explore", systemImage: "magnifyingglass")
                 }
-            Text("Profile")
+            NavigationStack{
+                Text("Profile")
+                    .navigationTitle("Profile")
+            }
                 .tabItem {
                     Label("Profile",systemImage: "person.circle")
                 }

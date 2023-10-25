@@ -30,7 +30,9 @@ struct ContentView: View {
                 
                 ForEach(Rows) { row in
                     myWorkRows(data: row)
-                    
+                    if Rows.last?.id != row.id{
+                        Divider()
+                    }
                 }
                 
                 
@@ -72,7 +74,6 @@ struct ContentView: View {
             VStack {
                 Text("The things you need, one tap away")
                     .fontWeight(.heavy)
-                    .multilineTextAlignment(.center)
                     .padding()
                 Text("Fast access to your list of issues, pull request, or Discussions")
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .center)
@@ -120,7 +121,7 @@ struct myWorkRows: View {
             
         }
         .padding()
-        Divider()
+        
         
         
     }
