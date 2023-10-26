@@ -20,7 +20,7 @@ struct ContentView: View {
             VStack {
                 
                 
-                let Rows = [myRows(text: "issues", image: "smallcircle.filled.circle", backgroundColors: Color.green),
+                let Rows : Array<myRows> = [myRows(text: "issues", image: "smallcircle.filled.circle", backgroundColors: Color.green),
                             myRows(text: "Pull Request", image: "arrow.triangle.pull", backgroundColors: .blue)
                             ,myRows(text: "Discussions", image: "bubble.left.and.bubble.right", backgroundColors: .purple)
                             ,myRows(text: "Projects", image: "archivebox", backgroundColors: .gray)
@@ -53,7 +53,7 @@ struct ContentView: View {
             VStack {
                 Text("Add favorite repositories here to have quick access at any time, without having to search")
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal)
+                    .padding()
                 Button(action: {print("Favourite pressed")}, label: {
                     Text("Add favorites")
                 })

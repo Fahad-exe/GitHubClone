@@ -14,6 +14,7 @@
 		A966E1F62AE7D498004E0A19 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A966E1F52AE7D497004E0A19 /* RootView.swift */; };
 		A966E1F82AE7D4B7004E0A19 /* NotificationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A966E1F72AE7D4B7004E0A19 /* NotificationPage.swift */; };
 		A966E1FA2AE7D4DC004E0A19 /* ExplorePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A966E1F92AE7D4DC004E0A19 /* ExplorePage.swift */; };
+		A966E1FC2AE910A0004E0A19 /* ProfileViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A966E1FB2AE910A0004E0A19 /* ProfileViewPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		A966E1F52AE7D497004E0A19 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		A966E1F72AE7D4B7004E0A19 /* NotificationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPage.swift; sourceTree = "<group>"; };
 		A966E1F92AE7D4DC004E0A19 /* ExplorePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePage.swift; sourceTree = "<group>"; };
+		A966E1FB2AE910A0004E0A19 /* ProfileViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				A966E1E72AE7D47E004E0A19 /* GitHubCloneApp.swift */,
 				A966E1E92AE7D47E004E0A19 /* ContentView.swift */,
 				A966E1F92AE7D4DC004E0A19 /* ExplorePage.swift */,
+				A966E1FB2AE910A0004E0A19 /* ProfileViewPage.swift */,
 				A966E1F72AE7D4B7004E0A19 /* NotificationPage.swift */,
 				A966E1F52AE7D497004E0A19 /* RootView.swift */,
 				A966E1EB2AE7D481004E0A19 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 				A966E1E82AE7D47E004E0A19 /* GitHubCloneApp.swift in Sources */,
 				A966E1FA2AE7D4DC004E0A19 /* ExplorePage.swift in Sources */,
 				A966E1F62AE7D498004E0A19 /* RootView.swift in Sources */,
+				A966E1FC2AE910A0004E0A19 /* ProfileViewPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
