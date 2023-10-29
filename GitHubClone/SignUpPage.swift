@@ -12,7 +12,24 @@ struct SignUpPage: View {
     @State private var password: String = ""
     @State private var confirmpass: String = ""
     @State private var fullName: String = ""
+    @State private var isValidname = true
+    @State private var isValidPassword = true
+    
+    func nameIsValid() -> Bool {
+           return !fullName.isEmpty && !containsNumber(fullName)
+       }
+
+       // Function to check if the password is valid
+       func passwordIsValid() -> Bool {
+           return !password.isEmpty
+       }
+
+       // Function to check if a string contains a number
+       func containsNumber(_ text: String) -> Bool {
+           return text.rangeOfCharacter(from: .decimalDigits) != nil
+       }
     var body: some View {
+        
         
         VStack {
             Form {
@@ -22,27 +39,29 @@ struct SignUpPage: View {
                     
                 }
                 .padding(.horizontal)
-                .background(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/).fill(Color.clear).stroke(Color.red,lineWidth:2))
+                .background(RoundedRectangle(cornerRadius: 5).fill(Color.clear).stroke(Color.red,lineWidth:2) )
                 HStack{
                     Image(systemName:"envelope")
-                    TextField("Email Address", text: $email)
+                    TextField("Email Address", text: $fullName)
                     
                 }
                 .padding(.horizontal)
-                .background(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/).fill(Color.clear).stroke(Color.red,lineWidth:2))
+                .background(RoundedRectangle(cornerRadius: 5).fill(Color.clear).stroke(Color.red,lineWidth:2))
                 HStack{
                     Image(systemName:"lock")
-                    TextField("Password", text: $email)
+                    TextField("Password", text: $password)
+                        
                     
                 }
                 .padding(.horizontal)
-                .background(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/).fill(Color.clear).stroke(Color.red,lineWidth:2))
+                .background(RoundedRectangle(cornerRadius: 5).fill(Color.clear).stroke(Color.red,lineWidth:2))
+                
                 HStack{
                     Image(systemName:"lock")
                     SecureField("Confirm Password", text: $password)
                 }
                 .padding(.horizontal)
-                .background(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/).fill(Color.clear).stroke(Color.red,lineWidth:2))
+                .background(RoundedRectangle(cornerRadius: 5).fill(Color.clear).stroke(Color.red,lineWidth:2))
             }
             .scrollContentBackground(.hidden)
             .background(.clear)
@@ -66,6 +85,7 @@ struct SignUpPage: View {
             .cornerRadius(25)
             .padding()
         }
+        
         Spacer()
     }
 }
