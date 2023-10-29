@@ -11,7 +11,7 @@ import SwiftUI
 struct GitHubCloneApp: App {
     var body: some Scene {
         WindowGroup {
-            RootView()
+            SplashView()
         }
     }
 }

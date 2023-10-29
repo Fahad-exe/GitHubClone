@@ -9,6 +9,10 @@ import SwiftUI
 
 struct RootView: View {
     var body: some View {
+        AuthPage()
+        //GitHubApp()
+    }
+    func GitHubApp() -> some View{
         TabView{
             NavigationStack{
                 ContentView()
